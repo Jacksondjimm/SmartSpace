@@ -1,0 +1,338 @@
+@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model RazorPagesApp.Pages.IndexModel
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMART SPACE</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/WebApplication.styles.css" />
+</head>
+<body text="#00FFFF" bgcolor="#000000">
+
+<h3 align = "center"> 
+Главная 
+<button > <a asp-page = "bedroom">Спальня</a></button>
+<button > <a asp-page = "childrens_room">Детская</a></button>
+<button > <a asp-page = "hall">Зал</a></button>
+<button > <a asp-page = "hallway">Коридор</a></button>
+<button > <a asp-page = "kitchen">Кухня</a></button>
+<br>
+</h3>
+
+        <!-- начало таблицы-->
+<table  align=center width=700px>
+<colgroup>
+    <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+    <col span="8" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+</colgroup>
+<caption><h3>Вывод информации с датчиков</h3></caption>
+  <tr align=center style="background:Purple; color: Aqua">
+    <th>Объект</th>
+    <th>ID</th>
+    <th>Температура &degС</th>
+    <th>Влажность %</th>
+    <th>Номер</th>
+    <th>Время</th>
+    <th>Дата</th>
+  </tr>
+  <tr align=center>
+   <td>Спальня</td>
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].Id</td> 
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].temp</td>
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].hum</td>
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].num</td>
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].date.ToShortTimeString()</td>
+   <td>@Model.SensorData_01[@Model.iMaxSearch(@Model.SensorData_01)].date.ToShortDateString()</td>
+ </tr>  
+  <tr align=center>
+   <td>Детская</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].Id</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].temp</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].hum</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].num</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].date.ToShortTimeString()</td>
+   <td>@Model.SensorData_02[@Model.iMaxSearch(@Model.SensorData_02)].date.ToShortDateString()</td>
+  </tr>     
+  <tr align=center>
+   <td>Зал</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].Id</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].temp</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].hum</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].num</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].date.ToShortTimeString()</td>
+   <td>@Model.SensorData_03[@Model.iMaxSearch(@Model.SensorData_03)].date.ToShortDateString()</td>
+  </tr>   
+  <tr align=center>
+   <td>Коридор</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].Id</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].temp</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].hum</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].num</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].date.ToShortTimeString()</td>
+   <td>@Model.SensorData_04[@Model.iMaxSearch(@Model.SensorData_04)].date.ToShortDateString()</td>
+  </tr>  
+  <tr align=center>
+   <td>Кухня</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].Id</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].temp</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].hum</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].num</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].date.ToShortTimeString()</td>
+   <td>@Model.SensorData_05[@Model.iMaxSearch(@Model.SensorData_05)].date.ToShortDateString()</td>
+  </tr>  
+
+</table>
+<br><br><br>
+<!-- конец таблицы-->
+
+    <table align=center width=900px>
+      <colgroup>
+       <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+       <col span="9" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+      </colgroup>
+      <caption><h3>Список данных из БД SensorData_01</h3></caption>
+        <tr align=center style="background:Purple; color: Aqua">
+          <th>ID</th>
+          <th>GET запрос</th>
+          <th>Кол-во строк</th>
+          <th>Темп.</th>
+          <th>Влаж.</th>
+          <th>Ном.</th>
+          <th>Дата</th>
+          <th>Изменить</th>
+          <th>Удалить</th>
+        </tr>
+        @foreach (var Sensor_01 in Model.SensorData_01.OrderByDescending(p => p.date))
+        {
+                  <tr align=center>
+                      <td>@Sensor_01.Id</td>
+                      <td>@Sensor_01.Name</td>
+                      <td>@Sensor_01.Age</td>
+                      <td>@Sensor_01.temp</td>
+                      <td>@Sensor_01.hum</td>
+                      <td>@Sensor_01.num</td>
+                      <td>@Sensor_01.date</td>
+                          
+                          <td>
+                              <form method="post">
+                                  <a asp-page="Edit" asp-route-id="@Sensor_01.Id">
+                                  Изменить
+                                  </a>
+                              </form>
+                          </td>
+                          <td>
+                              <form method="post">
+                                  <button type="submit" asp-page-handler="delete" asp-route-id="@Sensor_01.Id">
+                                      Удалить
+                                  </button>
+
+                              </form>
+                          </td>
+                  </tr>
+        }
+    </table>
+    <p align=center><a href="/Create">Добавить данные</a></></p>
+
+
+    <table align=center width=900px>
+      <colgroup>
+       <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+       <col span="9" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+      </colgroup>
+      <caption><h3>Список данных из БД SensorData_02</h3></caption>
+        <tr align=center style="background:Purple; color: Aqua">
+          <th>ID</th>
+          <th>GET запрос</th>
+          <th>Кол-во строк</th>
+          <th>Темп.</th>
+          <th>Влаж.</th>
+          <th>Ном.</th>
+          <th>Дата</th>
+          <th>Изменить</th>
+          <th>Удалить</th>
+        </tr>
+        @foreach (var Sensor_02 in Model.SensorData_02.OrderByDescending(p => p.date))
+        {
+                      <tr align=center>
+                          <td>@Sensor_02.Id</td>
+                          <td>@Sensor_02.Name</td>
+                          <td>@Sensor_02.Age</td>
+                          <td>@Sensor_02.temp</td>
+                          <td>@Sensor_02.hum</td>
+                          <td>@Sensor_02.num</td>
+                          <td>@Sensor_02.date</td>
+
+                              <td>
+                                  <form method="post">
+                                      <a asp-page="Edit" asp-route-id="@Sensor_02.Id">
+                                      Изменить
+                                      </a>
+                                  </form>
+                              </td>
+                              <td>
+                                  <form method="post">
+                                      <button type="submit" asp-page-handler="delete" asp-route-id="@Sensor_02.Id">
+                                          Удалить
+                                      </button>
+
+                                  </form>
+                              </td>
+                      </tr>
+        }
+    </table>
+    <p align=center><a href="/Create">Добавить данные</a></></p>
+
+    <table align=center width=900px>
+      <colgroup>
+       <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+       <col span="9" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+      </colgroup>
+      <caption><h3>Список данных из БД SensorData_03</h3></caption>
+        <tr align=center style="background:Purple; color: Aqua">
+          <th>ID</th>
+          <th>GET запрос</th>
+          <th>Кол-во строк</th>
+          <th>Темп.</th>
+          <th>Влаж.</th>
+          <th>Ном.</th>
+          <th>Дата</th>
+          <th>Изменить</th>
+          <th>Удалить</th>
+        </tr>
+        @foreach (var Sensor_03 in Model.SensorData_03.OrderByDescending(p => p.date))
+        {
+                      <tr align=center>
+                          <td>@Sensor_03.Id</td>
+                          <td>@Sensor_03.Name</td>
+                          <td>@Sensor_03.Age</td>
+                          <td>@Sensor_03.temp</td>
+                          <td>@Sensor_03.hum</td>
+                          <td>@Sensor_03.num</td>
+                          <td>@Sensor_03.date</td>
+
+                          <td>
+                              <form method="post">
+                                  <a asp-page="Edit" asp-route-id="@Sensor_03.Id">
+                                  Изменить
+                                  </a>
+                              </form>
+                          </td>
+                          <td>
+                              <form method="post">
+                                  <button type="submit" asp-page-handler="delete" asp-route-id="@Sensor_03.Id">
+                                      Удалить
+                                  </button>
+
+                              </form>
+                          </td>
+                      </tr>
+        }
+    </table>
+    <p align=center><a href="/Create">Добавить данные</a></></p>
+
+
+
+    <table align=center width=900px>
+      <colgroup>
+       <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+       <col span="9" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+      </colgroup>
+      <caption><h3>Список данных из БД SensorData_04</h3></caption>
+        <tr align=center style="background:Purple; color: Aqua">
+          <th>ID</th>
+          <th>GET запрос</th>
+          <th>Кол-во строк</th>
+          <th>Темп.</th>
+          <th>Влаж.</th>
+          <th>Ном.</th>
+          <th>Дата</th>
+          <th>Изменить</th>
+          <th>Удалить</th>
+        </tr>
+        @foreach (var Sensor_04 in Model.SensorData_04.OrderByDescending(p => p.date))
+        {
+                          <tr align=center>
+                              <td>@Sensor_04.Id</td>
+                              <td>@Sensor_04.Name</td>
+                              <td>@Sensor_04.Age</td>
+                              <td>@Sensor_04.temp</td>
+                              <td>@Sensor_04.hum</td>
+                              <td>@Sensor_04.num</td>
+                              <td>@Sensor_04.date</td>
+
+                                  <td>
+                                      <form method="post">
+                                          <a asp-page="Edit" asp-route-id="@Sensor_04.Id">
+                                          Изменить
+                                          </a>
+                                      </form>
+                                  </td>
+                                  <td>
+                                      <form method="post">
+                                          <button type="submit" asp-page-handler="delete" asp-route-id="@Sensor_04.Id">
+                                              Удалить
+                                          </button>
+
+                                      </form>
+                                  </td>
+                          </tr>
+        }
+    </table>
+    <p align=center><a href="/Create">Добавить данные</a></></p>
+
+
+
+    <table align=center width=900px>
+      <colgroup>
+       <col span="1" style="background:DarkSlateGrey">                         <!-- Фон первого столбца таблицы-->
+       <col span="9" style="background-color:DimGrey">                  <!-- Фон для следующего(следующих) столбца таблицы-->
+      </colgroup>
+      <caption><h3>Список данных из БД SensorData_05</h3></caption>
+        <tr align=center style="background:Purple; color: Aqua">
+          <th>ID</th>
+          <th>GET запрос</th>
+          <th>Кол-во строк</th>
+          <th>Темп.</th>
+          <th>Влаж.</th>
+          <th>Ном.</th>
+          <th>Дата</th>
+          <th>Изменить</th>
+          <th>Удалить</th>
+        </tr>
+        @foreach (var Sensor_05 in Model.SensorData_05.OrderByDescending(p => p.date))
+        {
+                          <tr align=center>
+                              <td>@Sensor_05.Id</td>
+                              <td>@Sensor_05.Name</td>
+                              <td>@Sensor_05.Age</td>
+                              <td>@Sensor_05.temp</td>
+                              <td>@Sensor_05.hum</td>
+                              <td>@Sensor_05.num</td>
+                              <td>@Sensor_05.date</td>
+
+                                  <td>
+                                      <form method="post">
+                                          <a asp-page="Edit" asp-route-id="@Sensor_05.Id">
+                                          Изменить
+                                          </a>
+                                      </form>
+                                  </td>
+                                  <td>
+                                      <form method="post">
+                                          <button type="submit" asp-page-handler="delete" asp-route-id="@Sensor_05.Id">
+                                              Удалить
+                                          </button>
+
+                                      </form>
+                                  </td>
+                          </tr>
+        }
+    </table>
+    <p align=center><a href="/Create">Добавить данные</a></></p>
+
+
+</body>
+</html>
