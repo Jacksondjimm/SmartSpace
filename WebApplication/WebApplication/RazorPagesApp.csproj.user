@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ActiveDebugProfile>https</ActiveDebugProfile>
+    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>G:\Works\C#\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\WebApplication\WebApplication\Properties\PublishProfiles\FolderProfile4.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>G:\Works\C#\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\WebApplication\WebApplication\Properties\PublishProfiles\FolderProfile5.pubxml</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

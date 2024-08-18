@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HoxQ0OdcVwu498cayrOy567fecMLSrv0RHUc+cb3050=",
+  "Hash": "KVX1jbE7nsJcb8BNmJhGLv5HMq1jlZZnPaDdBJXDwXU=",
   "Source": "RazorPagesApp",
   "BasePath": "_content/RazorPagesApp",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\RazorPagesApp.styles.css",
+      "Identity": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\RazorPagesApp.styles.css",
       "SourceId": "RazorPagesApp",
       "SourceType": "Computed",
-      "ContentRoot": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/RazorPagesApp",
       "RelativePath": "RazorPagesApp.styles.css",
       "AssetKind": "All",
@@ -23,13 +23,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\RazorPagesApp.styles.css"
+      "OriginalItemSpec": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\bundle\\RazorPagesApp.styles.css"
     },
     {
-      "Identity": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RazorPagesApp.bundle.scp.css",
+      "Identity": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RazorPagesApp.bundle.scp.css",
       "SourceId": "RazorPagesApp",
       "SourceType": "Computed",
-      "ContentRoot": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/RazorPagesApp",
       "RelativePath": "RazorPagesApp.bundle.scp.css",
       "AssetKind": "All",
@@ -40,7 +40,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "G:\\Works\\C#\\23_06_15 smart на IIS from homePC_5sens_manywin_with_manytable_DB_GH\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RazorPagesApp.bundle.scp.css"
+      "OriginalItemSpec": "G:\\Works\\C#\\24_08_11 smart на IIS from homePC_5sens_manywin_with_manytable_DB_Fusionchart\\WebApplication\\WebApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\RazorPagesApp.bundle.scp.css"
     }
   ]
 }

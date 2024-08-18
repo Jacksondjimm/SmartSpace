@@ -9,6 +9,11 @@
 <head>
     <title>SMART SPACE</title>
     <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    <script src="//cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script src="//cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
 </head>
 <body     text="#00FFFF" bgcolor="#000000">
     <h3 align = "center"> 
@@ -18,7 +23,15 @@
     <button > <a asp-page = "hall">Зал</a></button>
     <button > <a asp-page = "hallway">Коридор</a></button>
     Кухня
+    <br>
     </h3>
+
+    <!-- начало графика-->
+        <form align=center  method="post">
+        <div>@Html.Raw(Model.ChartJson)</div>
+        <br />
+        </form>
+    <!-- конец графика-->
 
     <!-- начало таблицы-->
 <table  align=center width=500px>

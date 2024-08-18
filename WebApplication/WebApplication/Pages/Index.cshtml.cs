@@ -27,7 +27,7 @@ namespace RazorPagesApp.Pages
         public int iSearch_03 = 0;
         public int iSearch_04 = 0;
         public int iSearch_05 = 0;
-        public int dbCountString = 10; //количество строк в каждой Ѕƒ или грубина архива в строках другими словами
+        public int dbCountString = 1000; //количество строк в каждой Ѕƒ или грубина архива в строках другими словами
        
 
                 public async Task OnGet()
