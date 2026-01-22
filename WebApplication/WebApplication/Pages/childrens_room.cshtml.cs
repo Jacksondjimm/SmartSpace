@@ -31,7 +31,7 @@ namespace RazorPagesApp.Pages
             // Add rows to data table
             for (int i = 0; i < SensorData_02.Count; i++)
             {
-                ChartData.Rows.Add($"{SensorData_02[i].date.ToShortTimeString()}, {(SensorData_02[i].date.ToShortDateString()).Substring(0, 5)}", (SensorData_02[i].temp));
+                ChartData.Rows.Add($"{SensorData_02[i].date.TimeOfDay.ToString().Substring(0, 5)}, {SensorData_02[i].date.Date.ToString().Substring(0, 5)}", (SensorData_02[i].temp));
             }
             // Create static source with this data table
             StaticSource source = new StaticSource(ChartData);

@@ -9,6 +9,6 @@
         public float temp { get; set; }
         public float hum { get; set; }
         public float num { get; set; }
-        public DateTime date { get; set; }
+        public DateTimeOffset date { get; set; }
     }
 }

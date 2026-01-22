@@ -47,14 +47,14 @@
     <th>Время</th>
     <th>Дата</th>
    </tr>
-        @foreach (var Sensor in Model.SensorData_05.OrderByDescending(p => p.date).Skip(1).SkipLast(1))
+        @foreach (var Sensor in Model.SensorData_05.OrderByDescending(p => p.date))
         {
                              <tr align=center>
                                  <td>@Sensor.Id</td>
                                  <td>@Sensor.temp</td>
                                  <td>@Sensor.hum</td>
-                                 <td>@Sensor.date.ToShortTimeString()</td>
-                                 <td>@Sensor.date.ToShortDateString()</td>
+                                 <td>@Sensor.date.TimeOfDay.ToString().Substring(0, 5)</td>
+                                 <td>@Sensor.date.Date.ToString().Substring(0, 10)</td>
 
                              </tr>  
         }

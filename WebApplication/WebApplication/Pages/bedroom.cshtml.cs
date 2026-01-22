@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Runtime.Serialization;
-using System.Globalization; // для передачи точки вместо запятой  //https://metanit.com/sharp/tutorial/20.4.php
 using Microsoft.EntityFrameworkCore;
 using RazorPagesApp.Models;
 using Microsoft.AspNetCore.SignalR;
@@ -10,6 +9,7 @@ using System;
 using FusionCharts.DataEngine;
 using FusionCharts.Visualization;
 using System.Data;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RazorPagesApp.Pages
 {
@@ -35,8 +35,8 @@ namespace RazorPagesApp.Pages
             // Add rows to data table
             for (int i = 0; i < SensorData_01.Count; i++)
             {
-                ChartData.Rows.Add($"{SensorData_01[i].date.ToShortTimeString()}, {(SensorData_01[i].date.ToShortDateString()).Substring(0, 5)}", (SensorData_01[i].temp));
-            }  
+                ChartData.Rows.Add($"{SensorData_01[i].date.TimeOfDay.ToString().Substring(0, 5)}, {SensorData_01[i].date.Date.ToString().Substring(0, 5)}", (SensorData_01[i].temp));
+            }
             // Create static source with this data table
             StaticSource source = new StaticSource(ChartData);
             // Create instance of DataModel class

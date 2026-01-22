@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RazorPagesApp.Data;
 
 namespace RazorPagesApp.Models
 {
@@ -13,7 +14,7 @@ namespace RazorPagesApp.Models
         public DbSet<User> Users { get; set; } = null!; // for test only
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) 
         {
-            Database.EnsureCreated();// создаем базу данных при первом обращении
+           // Database.EnsureCreated();// создаем базу данных при первом обращении
         }
     }
 }
