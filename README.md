@@ -16,5 +16,5 @@
 
 
 Ссылка на доступ к сайту:
-http://88.201.252.176/
+https://home.smartspace.netcraze.link/
 
